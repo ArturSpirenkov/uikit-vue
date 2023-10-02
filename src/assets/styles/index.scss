@@ -11,27 +11,24 @@
   --warning-hover: #ffc7a6;
   --danger: #ff647c;
   --danger-hover: #fdafbb;
+  --bg-main: #e6e6e6;
+  --font-color: #000000;
+}
+
+.dark-theme {
+  --bg-main: #36496e;
+  --font-color: #ffffff;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  background: #fafafa;
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
 
 a {
   color: var(--primary-color);
   text-decoration: none;
-}
-
-.line {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  &_block {
-    display: block;
-  }
 }
