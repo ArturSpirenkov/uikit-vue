@@ -1,0 +1,34 @@
+:root {
+  --primary: #6979f8;
+  --primary-hover: #a5affb;
+  --second: #be52f2;
+  --second-hover: #dba5f5;
+  --success: #00c48c;
+  --success-hover: #7ddfc3;
+  --info: #0084f4;
+  --info-hover: #66b5f8;
+  --warning: #ffa26b;
+  --warning-hover: #ffc7a6;
+  --danger: #ff647c;
+  --danger-hover: #fdafbb;
+  --bg-main: #e6e6e6;
+  --font-color: #000000;
+}
+
+.dark-theme {
+  --bg-main: #36496e;
+  --font-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+} /*# sourceMappingURL=index.css.map */

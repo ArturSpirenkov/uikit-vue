@@ -1,12 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
-const Index = () => import('@/views/IndexView.vue')
-const Button = () => import('@/views/ButtonView.vue')
-const Typography = () => import('@/views/TypographyView.vue')
-const Checkbox = () => import('@/views/CheckboxView.vue')
-const Radiobutton = () => import('@/views/RadiobuttonView.vue')
+const Index = () => import('@/views/IndexView.vue');
+const Button = () => import('@/views/ButtonView.vue');
+const Typography = () => import('@/views/TypographyView.vue');
+const Checkbox = () => import('@/views/CheckboxView.vue');
+const Radiobutton = () => import('@/views/RadiobuttonView.vue');
 
-const history = createWebHistory()
+const history = createWebHistory();
 
 const routes = [
   {
@@ -34,11 +34,11 @@ const routes = [
     name: 'Radiobutton',
     component: Radiobutton,
   },
-]
+];
 
 const router = createRouter({
   history,
   routes,
-})
+});
 
-export default router
+export default router;
