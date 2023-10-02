@@ -1,6 +1,24 @@
+<script setup>
+import CheckBox from '@/components/Checkbox/CheckBox.vue'
+import { ref, watch } from 'vue'
+
+const isDarkTheme = ref(false)
+
+const toggle = watch(isDarkTheme, () => {
+  document.body.classList.toggle('dark-theme')
+})
+</script>
+
 <template>
   <header class="header">
     <RouterLink to="/">UI Kit </RouterLink>
+    <CheckBox
+      label="Theme"
+      id="theme"
+      type="switch"
+      v-model:checked="isDarkTheme"
+      style="padding-left: 10px"
+    />
   </header>
 </template>
 
@@ -14,6 +32,9 @@
   display: flex;
   align-items: center;
   z-index: 1;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-main);
 }
 </style>
