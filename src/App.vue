@@ -1,7 +1,7 @@
-<script setup lang="ts">
+<script setup>
+import LayoutHeader from '@/layout/HeaderComponents.vue'
+import LayoutSidebar from '@/layout/SidebarComponents.vue'
 import { ref } from 'vue'
-import HeaderView from '@/layout/HeaderComponents.vue'
-import SidebarView from '@/layout/SidebarComponents.vue'
 
 const isOpenMenu = ref(false)
 
@@ -12,9 +12,11 @@ const toggleMenu = () => {
 
 <template>
   <div class="container">
-    <div class="sidebar-toggle" @click="toggleMenu">XXX</div>
-    <HeaderView />
-    <SidebarView :openSidebar="isOpenMenu" />
+    <LayoutHeader class="header" />
+    <div class="sidebar-toggle" @click="toggleMenu">
+      <font-awesome-icon icon="fa-regular fa-rectangle-list" :beatFade="isOpenMenu" size="xl" />
+    </div>
+    <LayoutSidebar :openSidebar="isOpenMenu" />
     <div :class="['content', { content_full: !isOpenMenu }]">
       <RouterView />
     </div>
@@ -22,23 +24,30 @@ const toggleMenu = () => {
 </template>
 
 <style lang="scss">
-@import '@/assets/styles/index.scss';
-
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  background-color: var(--bg-main);
+  color: var(--font-color);
+  height: 100vh;
+}
 .content {
   max-width: 1400px;
-  margin-left: 250px;
-  padding: 30px;
+  margin-left: 285px;
+  padding-top: 62px;
+  padding-left: 40px;
   transition: 0.2s;
-  background-color: aqua;
   &_full {
     margin-left: 0;
   }
 }
-
 .sidebar-toggle {
   position: fixed;
   left: 0;
-  width: 15px;
+  width: 35px;
   background: var(--primary);
   height: 100%;
   top: 62px;
@@ -48,11 +57,5 @@ const toggleMenu = () => {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media screen and (max-width: 1024px) {
-  .content {
-    margin-left: 0;
-  }
 }
 </style>
