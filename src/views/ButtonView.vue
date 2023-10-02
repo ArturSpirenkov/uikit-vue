@@ -1,9 +1,9 @@
 <script setup>
-import ButtonComponent from '@/components/ButtonComponent.vue'
+import ButtonComponent from '@/components/ButtonComponent.vue';
 
 const eventForButton = () => {
-  alert('You clicked danger button')
-}
+  alert('You clicked danger button');
+};
 </script>
 
 <template>

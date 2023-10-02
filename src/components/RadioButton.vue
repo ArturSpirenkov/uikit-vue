@@ -1,5 +1,5 @@
 <script setup>
-const emits = defineEmits(['update:checkedValue'])
+const emits = defineEmits(['update:checkedValue']);
 const props = defineProps({
   name: {
     type: String,
@@ -29,11 +29,11 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-})
+});
 
 const handleClick = (event) => {
-  emits('update:checkedValue', event.target.value)
-}
+  emits('update:checkedValue', event.target.value);
+};
 </script>
 
 <template>

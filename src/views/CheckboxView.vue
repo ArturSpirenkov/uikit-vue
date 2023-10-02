@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 import CheckBox from '@/components/Checkbox/CheckBox.vue';
-import CheckboxGroup from '@/components/Checkbox/CheckboxGroup.vue';
+import CheckboxGroup from '@/components/Checkbox/CheckBoxGroup.vue';
+
 const checkboxActive = ref(true);
 const checkboxDisabled = ref(true);
 const checkboxDisabledChecked = ref(true);

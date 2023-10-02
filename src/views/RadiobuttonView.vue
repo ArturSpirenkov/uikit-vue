@@ -1,17 +1,16 @@
 <script setup>
-import { ref } from 'vue'
-import RadioButton from '@/components/RadioButton.vue'
+import { ref } from 'vue';
+import RadioButton from '@/components/RadioButton.vue';
 
 const footballClubs = ref([
   { name: 'Nick', id: 'f1' },
   { name: 'Art', id: 'f2' },
   { name: 'Ivan', id: 'f3' },
   { name: 'Bob', id: 'f4' },
-])
-const selectedClub = ref('')
-
-const disabledRadio = ref(true)
-const disabledRadioChecked = ref(true)
+]);
+const selectedClub = ref('');
+const disabledRadio = ref(true);
+const disabledRadioChecked = ref(true);
 </script>
 
 <template>

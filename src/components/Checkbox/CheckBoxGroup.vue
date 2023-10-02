@@ -1,5 +1,5 @@
 <script setup>
-import Checkbox from '@/components/Checkbox/Checkbox.vue';
+import Checkbox from '@/components/Checkbox/CheckBox.vue';
 const emit = defineEmits(['update:value']);
 const props = defineProps({
   value: {

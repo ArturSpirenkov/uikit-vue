@@ -14,7 +14,12 @@
   --bg-main: #e6e6e6;
   --font-color: #000000;
 }
-
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--bg-main);
+}
 .dark-theme {
   --bg-main: #36496e;
   --font-color: #ffffff;

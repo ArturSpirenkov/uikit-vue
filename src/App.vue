@@ -1,13 +1,13 @@
 <script setup>
-import LayoutHeader from '@/layout/HeaderComponents.vue'
-import LayoutSidebar from '@/layout/SidebarComponents.vue'
-import { ref } from 'vue'
+import LayoutHeader from '@/layout/HeaderComponents.vue';
+import LayoutSidebar from '@/layout/SidebarComponents.vue';
+import { ref } from 'vue';
 
-const isOpenMenu = ref(false)
+const isOpenMenu = ref(false);
 
 const toggleMenu = () => {
-  isOpenMenu.value = !isOpenMenu.value
-}
+  isOpenMenu.value = !isOpenMenu.value;
+};
 </script>
 
 <template>
@@ -30,14 +30,13 @@ const toggleMenu = () => {
   -moz-osx-font-smoothing: grayscale;
 }
 .container {
-  background-color: var(--bg-main);
   color: var(--font-color);
   height: 100vh;
 }
 .content {
-  max-width: 1400px;
   margin-left: 285px;
   padding-top: 62px;
+  height: 100%;
   padding-left: 40px;
   transition: 0.2s;
   &_full {
