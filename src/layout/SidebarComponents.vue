@@ -1,20 +1,26 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue'
 
-interface SideBarProps {
-  openSidebar: boolean
-}
+const props = defineProps({
+  openSidebar: {
+    type: Boolean,
+    required: true,
+  },
+})
 
-const props = defineProps<SideBarProps>()
-
-const links = ref([{ name: 'Button', href: '/button' }])
+const links = ref([
+  { name: 'Typography', href: '/typography' },
+  { name: 'Button', href: '/button' },
+  { name: 'Checkbox', href: '/checkbox' },
+  { name: 'Radiobutton', href: '/radiobutton' },
+])
 </script>
 
 <template>
-  <div :class="['sidebar', { sidebar_isopen: props.openSidebar }]">
-    <RouterLink class="sidebar__link" v-for="link in links" :key="link.name" :to="link.href">{{
+  <div :class="['sidebar', { sidebar_isopen: openSidebar }]">
+    <router-link class="sidebar__link" v-for="link in links" :key="link.name" :to="link.href">{{
       link.name
-    }}</RouterLink>
+    }}</router-link>
   </div>
 </template>
 
@@ -25,18 +31,18 @@ const links = ref([{ name: 'Button', href: '/button' }])
   height: 100%;
   background: #fff;
   position: fixed;
-  width: 250px;
+  width: 285px;
   padding: 20px;
+  padding-left: 40px;
   transition: 0.2s;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
-  transform: translateX(-250px);
+  transform: translateX(-285px);
+  background-color: var(--bg-main);
   &_isopen {
     transform: translateX(0px);
   }
   &__link {
     display: block;
-    border-radius: 12px;
-    border: 2px solid #fff;
     transition: 0.2s;
     font-weight: bold;
     margin-bottom: 10px;
